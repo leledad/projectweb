@@ -1,5 +1,5 @@
-            $(function () {
-                $('#datetimepicker1').datetimepicker({
+$(function () {
+            $('#datetimepicker1').datetimepicker({
                     defaultDate: moment()
                 });
             });
