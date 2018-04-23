@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 20 Apr 2018 07:19:26 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/leledad/projectweb/blob/master/css/style.css" />
+  </head>
+  <body >
+    <div class="container order-cont">
+    <form role="form">
+        <div class="row">
+            <div class="col">
+                <h4 style="text-align: center;"><u>NEW ORDER</u></h4>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ordername">Order Name</label>
+                    <input type="text" class="form-control form-control-sm" id="ordername" name="order.name">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="ordertags">Tags</label>
+                    <select multiple="" id="ordertags" name="order.tags" class="form-control" data-role="tagsinput">
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="ordercreatedat">Created At</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control form-control-sm datetimepicker-input" data-target="#datetimepicker1" data-toggle="datetimepicker" id="ordercreatedat" name="order.created_at">
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ordercustomer">Customer</label>
+                    <select class="selectpicker form-control form-control-sm" data-live-search="true" title="Search" id="ordercustomer" name="order.customer">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="orderemail">Email</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" id="orderemail" name="order.email">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderphone">Phone</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" id="orderphone" name="order.phone">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-phone"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ordernotes">Notes</label>
+                    <textarea class="form-control" id="ordernotes" name="order.notes" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="billingcompany">Bill To: Company</label>
+                    <div class="input-group">
+                        <input id="billingcompany" name="billing.company" placeholder="Company" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-building-o"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="billingaddress1">Address Line 1</label>
+                    <div class="input-group">
+                        <input id="billingaddress1" name="billing.address1" placeholder="Address Line 1" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="billingaddress2">Address Line 2</label>
+                    <div class="input-group">
+                        <input id="billingaddress2" name="billing.address2" placeholder="Address Line 2" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="billingcity">City</label>
+                    <div class="input-group">
+                        <input id="billingcity" name="billing.city" placeholder="City" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="billingzip">ZIP</label>
+                            <div class="input-group">
+                                <input id="billingzip" name="billing.zip" placeholder="ZIP" class="form-control form-control-sm" type="text">
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-home"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="billingcountry">Country</label>
+                            <select class="selectpicker form-control form-control-sm" id="billingcountry" name="billing.country" title="-Select-">
+                                <option>Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="shippingcompany">Ship To: Company</label>
+                    <div class="input-group">
+                        <input id="shippingcompany" name="shipping.company" placeholder="Company" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-building-o"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shippingaddress1">Address Line 1</label>
+                    <div class="input-group">
+                        <input id="shippingaddress1" name="shipping.address1" placeholder="Address Line 1" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shippingaddress2">Address Line 2</label>
+                    <div class="input-group">
+                        <input id="shippingaddress2" name="shipping.address2" placeholder="Address Line 2" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shippingcity">City</label>
+                    <div class="input-group">
+                        <input id="shippingcity" name="shipping.city" placeholder="City" class="form-control form-control-sm" type="text">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="shippingzip">ZIP</label>
+                            <div class="input-group">
+                                <input id="shippingzip" name="shipping.zip" placeholder="ZIP" class="form-control form-control-sm" type="text">
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-home"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="shippingcountry">Country</label>
+                            <select class="selectpicker form-control form-control-sm" id="shippingcountry" name="shipping.country" title="-Select-">
+                                <option>Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        	<table class="table">
+        			<tr class='order-row'>
+				<td>
+					<input type='text' name='order-keys' value='{{ n.name }}' />
+				</td>
+				<td>
+					<input type='text' name='order-values' value='{{ n.value }}' />
+				</td>
+				<td>
+					<button class="remove-row"><i class="icon-remove"></i></button>
+				</td>
+			</tr>
+			</table>
+    </form>
+</div>
+    <!--scripts loaded here-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leledad/projectweb/blob/master/css/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  </body>
+  </html>
