@@ -46,7 +46,296 @@
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="ordercreatedat">Created At</label>
+                    <label for="ordercreatedat">Created At</label>    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/css/tempusdominus-bootstrap-4.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+  <div class="container order-cont"> 
+   <form class="orderform"> 
+    <div class="row headrow"> 
+     <div class="col"> 
+      <h4 style="text-align: center;"><u>NEW ORDER</u></h4> 
+     </div> 
+     <div class="col"> 
+     </div> 
+     <div class="col"> 
+     </div> 
+     <div class="col"> 
+      <button type="submit" class="btn btn-default">Submit</button> 
+      <button type="reset" class="btn btn-default">Reset</button> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="ordername">Order Name</label> 
+       <input type="text" class="form-control form-control-sm" id="ordername" name="order.name" placeholder="Order Name" /> 
+      </div> 
+     </div> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="ordertags">Tags</label> 
+       <select multiple="" id="ordertags" name="order.tags" class="form-control" data-role="tagsinput"> </select> 
+      </div> 
+     </div> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="ordercreatedat">Created At</label> 
+       <div class="input-group date" id="datetimepicker1" data-target-input="nearest"> 
+        <input type="text" class="form-control form-control-sm datetimepicker-input" data-target="#datetimepicker1" data-toggle="datetimepicker" id="ordercreatedat" name="order.created_at" /> 
+        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker"> 
+         <div class="input-group-text">
+          <i class="fa fa-calendar"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="ordercustomer">Customer</label> 
+       <select class="js-example-basic-single form-control form-control-sm" id="ordercustomer" name="order.customer"> </select> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="orderemail">Email</label> 
+       <div class="input-group"> 
+        <input type="text" class="form-control form-control-sm" id="orderemail" name="order.email" placeholder="Email" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-envelope"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="orderphone">Phone</label> 
+       <div class="input-group"> 
+        <input type="text" class="form-control form-control-sm" id="orderphone" name="order.phone" placeholder="Phone" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-phone"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="ordernotes">Notes</label> 
+       <textarea class="form-control" id="ordernotes" name="order.notes" rows="3" placeholder="Order Notes"></textarea> 
+      </div> 
+     </div> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="billingcompany">Bill To</label> 
+       <div class="input-group"> 
+        <div class="input-group-prepend"> 
+         <div class="input-group-text">
+          <i class="fa fa-building-o"></i>
+         </div> 
+        </div> 
+        <input id="billingcompany" name="billing.company" placeholder="Bill To" class="form-control form-control-sm" type="text" /> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="billingaddress1">Address Line 1</label> 
+       <div class="input-group"> 
+        <div class="input-group-prepend"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+        <input id="billingaddress1" name="billing.address1" placeholder="Address Line 1" class="form-control form-control-sm" type="text" /> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="billingaddress2">Address Line 2</label> 
+       <div class="input-group"> 
+        <div class="input-group-prepend"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+        <input id="billingaddress2" name="billing.address2" placeholder="Address Line 2" class="form-control form-control-sm" type="text" /> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="billingcity">City</label> 
+       <div class="input-group"> 
+        <div class="input-group-prepend"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+        <input id="billingcity" name="billing.city" placeholder="City" class="form-control form-control-sm" type="text" /> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col"> 
+        <div class="form-group"> 
+         <label class="sr-only" for="billingzip">ZIP</label> 
+         <div class="input-group"> 
+          <div class="input-group-prepend"> 
+           <div class="input-group-text">
+            <i class="fa fa-home"></i>
+           </div> 
+          </div> 
+          <input id="billingzip" name="billing.zip" placeholder="ZIP" class="form-control form-control-sm" type="text" /> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col"> 
+        <div class="form-group"> 
+         <label class="sr-only" for="billingcountry">Country</label> 
+         <select class="js-example-basic-single form-control form-control-sm" id="billingcountry" name="billing.country" placeholder="Country"> {% include 'country' %} </select> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="shippingcompany">Ship To: Company</label> 
+       <div class="input-group"> 
+        <input id="shippingcompany" name="shipping.company" placeholder="Ship To" class="form-control form-control-sm" type="text" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-building-o"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="shippingaddress1">Address Line 1</label> 
+       <div class="input-group"> 
+        <input id="shippingaddress1" name="shipping.address1" placeholder="Address Line 1" class="form-control form-control-sm" type="text" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="shippingaddress2">Address Line 2</label> 
+       <div class="input-group"> 
+        <input id="shippingaddress2" name="shipping.address2" placeholder="Address Line 2" class="form-control form-control-sm" type="text" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <label class="sr-only" for="shippingcity">City</label> 
+       <div class="input-group"> 
+        <input id="shippingcity" name="shipping.city" placeholder="City" class="form-control form-control-sm" type="text" /> 
+        <div class="input-group-append"> 
+         <div class="input-group-text">
+          <i class="fa fa-home"></i>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col"> 
+        <div class="form-group"> 
+         <label class="sr-only" for="shippingzip">ZIP</label> 
+         <div class="input-group"> 
+          <input id="shippingzip" name="shipping.zip" placeholder="ZIP" class="form-control form-control-sm" type="text" /> 
+          <div class="input-group-append"> 
+           <div class="input-group-text">
+            <i class="fa fa-home"></i>
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col"> 
+        <div class="form-group"> 
+         <label class="sr-only" for="shippingcountry">Country</label> 
+         <select class="js-example-basic-single form-control form-control-sm" id="shippingcountry" name="shipping.country" placeholder="Country"> {% include 'country' %} </select> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+<table class="line-items editable table table-bordered">
+    <thead class="panel-heading">
+        <tr class="panel-heading">
+            <th>ITC Part</th>
+            <th>Description</th>
+            <th>Vendor</th>
+            <th>Vendor Part</th>
+            <th>Cost</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th><span class="glyphicon glyphicon-list-alt"></span></th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th><input class="form-control input-sm" id="itc_part_input" name="itc_part_input" type="text"></th>
+            <th><textarea class="form-control input-sm" id="description_input" name="description_input" rows="2"></textarea></th>
+            <th><input class="form-control input-sm" id="vendor_input" name="vendor_input" type="text"></th>
+            <th><input class="form-control input-sm" id="vendor_part_input" name="vendor_part_input" type="text"></th>
+            <th><input class="form-control input-sm" id="cost_input" name="cost_input" type="text"></th>
+            <th><input class="form-control input-sm" id="price_input" name="price_input" type="text"></th>
+            <th><input class="form-control input-sm" id="qty_input" name="qty_input" value="1" type="text"></th>
+            <th><input class="form-control input-sm" id="subtotal_input" name="subtotal_input" disabled="disabled" type="text"></th>
+            <th><span class="glyphicon glyphicon-plus add-line-item" title="Add Line Item"></span></th>
+        </tr>
+        <tr>
+            <th colspan="9">
+                <div class="row">
+                    <div class="col-sm-6 order-number">Order Number: 80071</div>
+                    <div class="col-sm-6 text-right order-total">Total: $0.00</div>
+                </div>
+            </th>
+        </tr>
+    </tfoot>
+
+    <tbody>
+    </tbody>
+</table>
+   </form> 
+  </div>
+    <!--scripts loaded here-->
+    <script>
+    $(document).ready(function() {
+    $('#ordercustomer').select2({
+        placeholder: "Select Customer",
+        width: 'resolve' 
+        });
+    });
+    </script>
+    <script>
+    $('bootstrap-tagsinput input').tagsinput('focus');
+    $('bootstrap-tagsinput input').tagsinput({
+    focusClass: 'form-control-sm'
+    });
+    </script>
+    <script>
+			var sa = new ShopifyAPI();
+			sa.getAll("Product", { limit: 250, page: 1 }).done(function(products) {
+				console.log(products);
+			});
+			
+    </script>
+
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
                         <input type="text" class="form-control form-control-sm datetimepicker-input" data-target="#datetimepicker1" data-toggle="datetimepicker" id="ordercreatedat" name="order.created_at">
                         <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
