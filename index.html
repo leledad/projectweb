@@ -20,12 +20,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	</head>
-  <div class="container order-cont"> 
-   <form class="orderform">
-    <div class="row headrow"> 
-     <div class="col"> 
-      <h4 style="text-align: center;"><u>NEW ORDER</u></h4> 
-     </div> 
+<body>
+  <div class="container-fluid order-cont"> 
+   <form class="orderform"> 
     <div class="row"> 
      <div class="col"> 
       <div class="form-group"> 
@@ -57,7 +54,7 @@
      <div class="col"> 
       <div class="form-group"> 
        <label class="sr-only" for="ordercustomer">Customer</label> 
-       <select class="js-example-basic-single form-control form-control-sm" id="ordercustomer" name="order.customer"> </select> 
+       <select class="js-example-placeholder-single form-control form-control-sm" id="ordercustomer" name="order.customer"> </select> 
       </div> 
       <div class="form-group"> 
        <label class="sr-only" for="orderemail">Email</label> 
@@ -148,8 +145,8 @@
        <div class="col"> 
         <div class="form-group"> 
          <label class="sr-only" for="billingcountry">Country</label> 
-         <select class="js-example-basic-single form-control form-control-sm" id="billingcountry" name="billing.country" placeholder="Country"> {% include 'country' %} </select> 
-        </div> 
+         <select class="js-example-placeholder-single form-control form-control-sm" id="billingcountry" name="billing.country"> {% include 'country' %} </select> 
+        </div>
        </div> 
       </div> 
      </div> 
@@ -215,7 +212,7 @@
        <div class="col"> 
         <div class="form-group"> 
          <label class="sr-only" for="shippingcountry">Country</label> 
-         <select class="js-example-basic-single form-control form-control-sm" id="shippingcountry" name="shipping.country" placeholder="Country"> {% include 'country' %} </select> 
+         <select class="js-example-placeholder-single form-control form-control-sm" id="shippingcountry" name="shipping.country"> {% include 'country' %} </select> 
         </div> 
        </div> 
       </div> 
@@ -261,10 +258,10 @@
     <tbody>
     </tbody>
 </table>
-	    <div class="row">
+    <div class="row endrow"> 
      <div class="col"> 
-      <button type="submit" class="btn btn-default">Submit</button> 
-      <button type="reset" class="btn btn-default">Reset</button> 
+      <button type="submit" class="btn btn-info" id="saveorder">Submit</button> 
+      <button type="reset" class="btn btn-warning" id="resetorder">Reset</button> 
      </div> 
     </div> 
    </form> 
@@ -277,15 +274,12 @@
         width: 'resolve' 
         });
     $('#shippingcountry').select2({
-        placeholder: "Country",
-        width: 'resolve' 
+            placeholder: "Country"
         });
     $('#billingcountry').select2({
-        placeholder: "Country",
-        width: 'resolve' 
+            placeholder: "Country"
         });
     });
     </script>
-
   </body>
   </html>
