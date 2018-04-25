@@ -1,9 +1,10 @@
+<style>
 .order-cont {
     padding: 15px 15px 15px 15px;
     background-color: #f4f6f8;
 }
-.headrow {
-    margin-bottom: 10px;
+.endrow {
+    margin-top: 10px;
 }
 .bootstrap-tagsinput {
   background-color: #fff;
@@ -138,3 +139,4 @@ textarea {
 	-ms-user-select: none;
 	user-select: none;
 }
+</style>
