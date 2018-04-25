@@ -1,6 +1,9 @@
 .order-cont {
     padding: 25px 50px 25px 50px;
 }
+.headrow {
+ margin-bottom: 15px;   
+}
 .bootstrap-tagsinput {
   background-color: #fff;
   border: 1px solid #ccc;
